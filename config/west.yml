@@ -14,7 +14,7 @@ manifest:
     - name: zmk-pmw3610-driver
       remote: kumamuk-git
       revision: main
-    j- name: zmk-input-processor-temp-layer-threshold
+    - name: zmk-input-processor-temp-layer-threshold
       remote: yamaryu211
       revision: main
   self:
