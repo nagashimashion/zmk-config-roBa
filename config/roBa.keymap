@@ -80,10 +80,10 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W      &kp E         &kp R          &kp T                                                 &kp Y      &kp U  &kp I      &kp O    &kp P
-&kp A  &kp S      &kp D         &kp F          &kp G      &kp LS(LG(S))         &kp SEMICOLON        &kp H      &kp J  &kp K      &kp L    &kp MINUS
-&kp Z  &kp X      &kp C         &kp V          &kp B      &kp TAB               &kp SINGLE_QUOTE     &kp N      &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&mo 3  &kp LCTRL  &kp LEFT_ALT  &mt LCTRL ESC  &lt 1 F13  &mt LSHIFT SPACE      &mt RIGHT_ALT ENTER  &lt 2 F14                             &kp LEFT_WIN
+&kp Q        &kp W      &kp E         &kp R          &kp T                                                 &kp Y      &kp U  &kp I      &kp O    &kp P
+&kp A        &kp S      &kp D         &kp F          &kp G      &kp LS(LG(S))         &kp SEMICOLON        &kp H      &kp J  &kp K      &kp L    &kp MINUS
+&mt LSHFT Z  &kp X      &kp C         &kp V          &kp B      &kp TAB               &kp SINGLE_QUOTE     &kp N      &kp M  &kp COMMA  &kp DOT  &mt RSHFT SLASH
+&mo 3        &kp LCTRL  &kp LEFT_ALT  &mt LCTRL ESC  &lt 1 F13  &mt LSHIFT SPACE      &mt RIGHT_ALT ENTER  &lt 2 F14                             &kp LEFT_WIN
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
@@ -91,19 +91,19 @@
 
         NUM {
             bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                     &kp HOME        &none           &kp PAGE_UP   &kp END          &kp PRINTSCREEN
-&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp BACKSPACE     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &kp DEL           &none           &kp PAGE_DOWN   &none         &none            &none
-&trans                      &trans           &trans           &trans           &trans        &trans                       &mt RSHIFT ENTER  &kp RCTRL                                                      &none
+&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                  &kp HOME        &none           &kp PAGE_UP   &kp END          &kp PRINTSCREEN
+&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &kp DEL        &none           &kp PAGE_DOWN   &none         &none            &trans
+&trans                      &trans           &trans           &trans           &trans        &trans                       &trans         &kp RCTRL                                                      &trans
             >;
         };
 
         SPECIAL {
             bindings = <
-&kp QUESTION  &none      &kp EXCL   &none      &kp TILDE                       &kp INT_YEN  &kp UNDER  &kp LPAR  &kp RPAR  &kp PLUS
-&kp AT_SIGN   &kp ASTRK  &kp DLLR   &kp EQUAL  &kp GRAVE  &trans       &none   &kp HASH     &none      &kp LBRC  &kp RBRC  &kp MINUS
-&none         &none      &kp CARET  &kp PIPE   &kp BSLH   &kp TAB      &none   &kp AMPS     &kp PRCNT  &kp LBKT  &kp RBKT  &kp BSLH
-&trans        &trans     &trans     &trans     &trans     &trans       &trans  &trans                                      &none
+&kp QUESTION  &kp SLASH  &kp EXCL   &none      &kp TILDE                                  &kp ASTERISK   &kp UNDER         &kp LPAR          &kp RPAR           &kp PLUS
+&kp AT_SIGN   &kp ASTRK  &kp DLLR   &kp EQUAL  &kp GRAVE  &trans       &kp COLON          &kp HASH       &kp EQUAL         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp MINUS
+&kp AMPS      &kp PRCNT  &kp CARET  &kp PIPE   &kp BSLH   &kp TAB      &kp DOUBLE_QUOTES  &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp BSLH
+&trans        &trans     &trans     &trans     &trans     &trans       &trans             &trans                                                                &trans
             >;
         };
 
