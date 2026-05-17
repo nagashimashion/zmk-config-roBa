@@ -87,7 +87,8 @@
 &kp Q        &kp W      &kp E         &kp R          &kp T                                                 &kp Y      &kp U  &kp I      &kp O    &kp P
 &kp A        &kp S      &kp D         &kp F          &kp G      &kp LS(LG(S))         &kp SEMICOLON        &kp H      &kp J  &kp K      &kp L    &kp MINUS
 &mt LSHFT Z  &kp X      &kp C         &kp V          &kp B      &kp TAB               &kp SINGLE_QUOTE     &kp N      &kp M  &kp COMMA  &kp DOT  &mt RSHFT SLASH
-&mo SPECIAL  &kp LCTRL  &kp LEFT_ALT  &mt LCTRL ESC  &lt WIN_NUM F13 &mt LSHIFT SPACE &mt RIGHT_ALT ENTER  &lt FUNCTION F14                    &kp LEFT_WIN
+// 修正: 左端を FUNCTION、右の lt を SPECIAL に戻しました
+&mo FUNCTION &kp LCTRL  &kp LEFT_ALT  &mt LCTRL ESC  &lt WIN_NUM F13 &mt LSHIFT SPACE &mt RIGHT_ALT ENTER  &lt SPECIAL F14                    &kp LEFT_WIN
 >;
             sensor-bindings = <&rot_msc>;
         };
@@ -108,8 +109,7 @@
 &kp Q        &kp W      &kp E         &kp R          &kp T                                                 &kp Y      &kp U  &kp I      &kp O    &kp P
 &kp A        &kp S      &kp D         &kp F          &kp G      &kp LG(LS(NUMBER_4))  &kp SEMICOLON        &kp H      &kp J  &kp K      &kp L    &kp MINUS
 &mt LSHFT Z  &kp X      &kp C         &kp V          &kp B      &kp TAB               &kp SINGLE_QUOTE     &kp N      &kp M  &kp COMMA  &kp DOT  &mt RSHFT SLASH
-// Mac用: LCTRL→LCMD, LALT→LCTRL, LWIN→LALT (Option) など好みに合わせて変更
-&mo SPECIAL  &kp LCMD   &kp LCTRL     &mt LCMD ESC   &lt MAC_NUM F13 &mt LSHIFT SPACE &mt RIGHT_ALT ENTER  &lt FUNCTION F14                    &kp LEFT_ALT
+&mo FUNCTION &kp LCMD   &kp LCTRL     &mt LCMD ESC   &lt MAC_NUM F13 &mt LSHIFT SPACE &mt RIGHT_ALT ENTER  &lt SPECIAL F14                    &kp LEFT_ALT
 >;
             sensor-bindings = <&rot_msc>;
         };
@@ -121,7 +121,6 @@
 &kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE
 &mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &kp DEL        &none           &kp PAGE_DOWN   &none         &none            &trans
 &trans                      &trans           &trans           &trans           &trans        &trans                       &trans         &kp RCMD                                                       &trans
-// Mac用: RCTRL だった部分を RCMD (Command) に変更
 >;
         };
 
@@ -142,7 +141,6 @@
 &kp KP_NUMLOCK  &kp F4  &kp F5  &kp F6  &kp F11  &trans      &none        &none          &none         &none         &none         &none
 &kp K_EJECT     &kp F1  &kp F2  &kp F3  &kp F12  &trans      &bootloader  &to WIN_BASE   &to MAC_BASE  &none         &none         &bt BT_CLR
 &trans          &trans  &trans  &trans  &trans   &trans      &trans       &trans                                                   &trans
-// N の位置(左から8番目)に &to WIN_BASE 、 M の位置(左から9番目)に &to MAC_BASE を配置
 >;
         };
 
