@@ -87,7 +87,6 @@
 &kp Q        &kp W      &kp E         &kp R          &kp T                                                 &kp Y      &kp U  &kp I      &kp O    &kp P
 &kp A        &kp S      &kp D         &kp F          &kp G      &kp LS(LG(S))         &kp SEMICOLON        &kp H      &kp J  &kp K      &kp L    &kp MINUS
 &mt LSHFT Z  &kp X      &kp C         &kp V          &kp B      &kp TAB               &kp SINGLE_QUOTE     &kp N      &kp M  &kp COMMA  &kp DOT  &mt RSHFT SLASH
-// 修正: 左端を FUNCTION、右の lt を SPECIAL に戻しました
 &mo FUNCTION &kp LCTRL  &kp LEFT_ALT  &mt LCTRL ESC  &lt WIN_NUM F13 &mt LSHIFT SPACE &mt RIGHT_ALT ENTER  &lt SPECIAL F14                    &kp LEFT_WIN
 >;
             sensor-bindings = <&rot_msc>;
@@ -106,10 +105,10 @@
         /* ==================== 2: Mac Base ==================== */
         mac_default_layer {
             bindings = <
-&kp Q        &kp W      &kp E         &kp R          &kp T                                                 &kp Y      &kp U  &kp I      &kp O    &kp P
-&kp A        &kp S      &kp D         &kp F          &kp G      &kp LG(LS(NUMBER_4))  &kp SEMICOLON        &kp H      &kp J  &kp K      &kp L    &kp MINUS
-&mt LSHFT Z  &kp X      &kp C         &kp V          &kp B      &kp TAB               &kp SINGLE_QUOTE     &kp N      &kp M  &kp COMMA  &kp DOT  &mt RSHFT SLASH
-&mo FUNCTION &kp LCMD   &kp LCTRL     &mt LCMD ESC   &lt MAC_NUM F13 &mt LSHIFT SPACE &mt RIGHT_ALT ENTER  &lt SPECIAL F14                    &kp LEFT_ALT
+&kp Q        &kp W       &kp E            &kp R          &kp T                                                      &kp Y      &kp U  &kp I      &kp O    &kp P
+&kp A        &kp S       &kp D            &kp F          &kp G           &kp LG(LS(NUMBER_4))  &kp SEMICOLON        &kp H      &kp J  &kp K      &kp L    &kp MINUS
+&mt LSHFT Z  &kp X       &kp C            &kp V          &kp B           &kp TAB               &kp SINGLE_QUOTE     &kp N      &kp M  &kp COMMA  &kp DOT  &mt RSHFT SLASH
+&mo FUNCTION &kp LCTRL   &kp LEFT_ALT     &mt LCMD ESC   &lt MAC_NUM F13 &mt LSHIFT SPACE      &mt RIGHT_ALT ENTER  &lt SPECIAL F14                    &kp LEFT_ALT
 >;
             sensor-bindings = <&rot_msc>;
         };
