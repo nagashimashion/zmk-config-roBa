@@ -4,12 +4,16 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <input/processors.dtsi> // 追加: input processor用
 
+// --- 追加: スクロール量の定義（Qiita記事準拠） ---
+// 数値を大きくすると1回のカリッという回転でのスクロール量が増えます。
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-    // 追加: 長押し判定の時間を長めに設定（デフォルトの200から250へ）
+    // 長押し判定の時間を長めに設定
     tapping-term-ms = <250>;
-    // 追加: 直前のキー入力から150ms以内は長押ししてもShiftにならずタップ扱いにする（誤爆防止）
+    // 直前のキー入力から150ms以内は長押ししてもShiftにならずタップ扱いにする（誤爆防止）
     require-prior-idle-ms = <150>; 
 };
 
@@ -103,7 +107,8 @@
             #sensor-binding-cells = <0>;
             // 左回りで上スクロール、右回りで下スクロール
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-            // ※回転方向を逆にしたい場合は <&msc SCRL_DOWN>, <&msc SCRL_UP> に入れ替えてください
+            // --- 追加: スクロール操作としてOSに認識させるための待機時間（Qiita記事準拠） ---
+            tap-ms = <20>;
         };
     };
 
@@ -118,7 +123,7 @@
 &mo 3        &kp LCTRL  &kp LEFT_ALT  &mt LCTRL ESC  &lt 1 F13  &mt LSHIFT SPACE      &mt RIGHT_ALT ENTER  &lt 2 F14                             &kp LEFT_WIN
 >;
 
-            // 変更: default_layerのみにマウススクロールを設定
+            // default_layerのみにマウススクロールを設定
             sensor-bindings = <&rot_msc>;
         };
 
@@ -147,7 +152,6 @@
 &kp K_EJECT     &kp F1  &kp F2  &kp F3  &kp F12  &trans      &bootloader  &none         &none         &none         &none         &bt BT_CLR
 &trans          &trans  &trans  &trans  &trans   &trans      &trans       &trans                                                  &trans
 >;
-            // 削除: 上のレイヤー（default_layer）の &rot_msc を引き継ぐため
         };
 
         MOUSE {
@@ -157,7 +161,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
 >;
-            // 削除: 上のレイヤー（default_layer）の &rot_msc を引き継ぐため
         };
 
         SCROLL {
